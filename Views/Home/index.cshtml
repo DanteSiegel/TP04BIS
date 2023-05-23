@@ -1,0 +1,14 @@
+
+
+<h1>Listado de Países</h1>
+
+<ul>
+    @foreach (var pais in ViewBag.Paises)
+    {
+        <li>
+            <a href='@Url.Action( "DetallePais", new { pais = pais.Nombre })'>
+                <img src="/img/@pais.ImgBandera" alt="@pais.Nombre" width="100" height="50" />
+            </a>
+        </li>
+    }
+</ul>
